@@ -3,17 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="3fa8c747-d1d6-417c-a88d-5d7ad2c55b92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +35,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -60,7 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586964703088</updated>
       <workItem from="1586964705896" duration="271000" />
-      <workItem from="1586966466095" duration="283000" />
+      <workItem from="1586966466095" duration="879000" />
+      <workItem from="1586967430415" duration="5417000" />
     </task>
     <servers />
   </component>
@@ -68,21 +78,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1896" height="278" key="GridCell.Tab.0.bottom" timestamp="1586966621667">
+    <state width="1896" height="254" key="GridCell.Tab.0.bottom" timestamp="1586967447968">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1896" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586966621667" />
-    <state width="1896" height="278" key="GridCell.Tab.0.center" timestamp="1586966621666">
+    <state width="1896" height="254" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586967447968" />
+    <state width="1896" height="254" key="GridCell.Tab.0.center" timestamp="1586967447968">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1896" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586966621666" />
-    <state width="1896" height="278" key="GridCell.Tab.0.left" timestamp="1586966621666">
+    <state width="1896" height="254" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586967447968" />
+    <state width="1896" height="254" key="GridCell.Tab.0.left" timestamp="1586967447967">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1896" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586966621666" />
-    <state width="1896" height="278" key="GridCell.Tab.0.right" timestamp="1586966621666">
+    <state width="1896" height="254" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586967447967" />
+    <state width="1896" height="254" key="GridCell.Tab.0.right" timestamp="1586967447968">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1896" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586966621666" />
+    <state width="1896" height="254" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586967447968" />
+    <state x="434" y="187" key="SettingsEditor" timestamp="1586967350133">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="434" y="187" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1586967350133" />
   </component>
 </project>
