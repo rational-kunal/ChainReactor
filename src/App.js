@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Game from "./components/Game";
+import Board from "./components/Board";
 
 function App() {
   return (
       <div className="App">
-        <Game gridSize={{ rowCount:6, columnCount:4 }} playerCount={2} />
+        <Board classList="center" gridSize={{ rowCount:6, columnCount:4 }} playerCount={2} />
       </div>
   );
 }
