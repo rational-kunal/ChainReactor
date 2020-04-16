@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/https,://rational-kunal.github.io/ChainReactor/static/css/main.612a89c0.chunk.css",
-    "main.js": "/https,://rational-kunal.github.io/ChainReactor/static/js/main.b565ba53.chunk.js",
-    "main.js.map": "/https,://rational-kunal.github.io/ChainReactor/static/js/main.b565ba53.chunk.js.map",
-    "runtime-main.js": "/https,://rational-kunal.github.io/ChainReactor/static/js/runtime-main.1fc2ec76.js",
-    "runtime-main.js.map": "/https,://rational-kunal.github.io/ChainReactor/static/js/runtime-main.1fc2ec76.js.map",
-    "static/js/2.910aa125.chunk.js": "/https,://rational-kunal.github.io/ChainReactor/static/js/2.910aa125.chunk.js",
-    "static/js/2.910aa125.chunk.js.map": "/https,://rational-kunal.github.io/ChainReactor/static/js/2.910aa125.chunk.js.map",
-    "index.html": "/https,://rational-kunal.github.io/ChainReactor/index.html",
-    "precache-manifest.4dc4a85505595aa777d8b897a2732997.js": "/https,://rational-kunal.github.io/ChainReactor/precache-manifest.4dc4a85505595aa777d8b897a2732997.js",
-    "service-worker.js": "/https,://rational-kunal.github.io/ChainReactor/service-worker.js",
-    "static/css/main.612a89c0.chunk.css.map": "/https,://rational-kunal.github.io/ChainReactor/static/css/main.612a89c0.chunk.css.map",
-    "static/js/2.910aa125.chunk.js.LICENSE.txt": "/https,://rational-kunal.github.io/ChainReactor/static/js/2.910aa125.chunk.js.LICENSE.txt"
+    "main.css": "/ChainReactor/static/css/main.612a89c0.chunk.css",
+    "main.js": "/ChainReactor/static/js/main.b7353253.chunk.js",
+    "main.js.map": "/ChainReactor/static/js/main.b7353253.chunk.js.map",
+    "runtime-main.js": "/ChainReactor/static/js/runtime-main.8d5dc4bf.js",
+    "runtime-main.js.map": "/ChainReactor/static/js/runtime-main.8d5dc4bf.js.map",
+    "static/js/2.910aa125.chunk.js": "/ChainReactor/static/js/2.910aa125.chunk.js",
+    "static/js/2.910aa125.chunk.js.map": "/ChainReactor/static/js/2.910aa125.chunk.js.map",
+    "index.html": "/ChainReactor/index.html",
+    "precache-manifest.c638f75474ecc02739ff802a1195687f.js": "/ChainReactor/precache-manifest.c638f75474ecc02739ff802a1195687f.js",
+    "service-worker.js": "/ChainReactor/service-worker.js",
+    "static/css/main.612a89c0.chunk.css.map": "/ChainReactor/static/css/main.612a89c0.chunk.css.map",
+    "static/js/2.910aa125.chunk.js.LICENSE.txt": "/ChainReactor/static/js/2.910aa125.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1fc2ec76.js",
+    "static/js/runtime-main.8d5dc4bf.js",
     "static/js/2.910aa125.chunk.js",
     "static/css/main.612a89c0.chunk.css",
-    "static/js/main.b565ba53.chunk.js"
+    "static/js/main.b7353253.chunk.js"
   ]
 }
