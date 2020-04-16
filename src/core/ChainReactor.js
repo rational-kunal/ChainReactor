@@ -26,11 +26,11 @@ class PlayerPoolController {
 
     isComplete() {
         let stillInGame = 0;
-        if ((this.moves > this.playerSize) && (!this.wait)) {
-            this.playerNRegion.forEach((n, i) => (n > 0) || stillInGame++);
+        if (this.moves > this.playerSize && !this.wait) {
+            this.playerNRegion.forEach((n, i) => n > 0 || stillInGame++);
 
-            if(stillInGame === 1) {
-                this.playerNRegion.forEach((n, i) => (n > 0) || this.wonFn(i));
+            if (stillInGame === 1) {
+                this.playerNRegion.forEach((n, i) => n > 0 || this.wonFn(i));
                 return true;
             }
 
@@ -54,8 +54,8 @@ export default class ChainReactor {
             for (let col = 0; col < this.gridSize.column; col++) {
                 this.grid[row].push({
                     value: 0,
-                    player: null
-                })
+                    player: null,
+                });
             }
         }
     }
@@ -67,23 +67,29 @@ export default class ChainReactor {
     }
 
     canAddAt(x, y) {
-        return ((this.grid[x][y].player == null) ||
-            (this.grid[x][y].player === this.playerController.currentPlayer));
+        return (
+            this.grid[x][y].player == null ||
+            this.grid[x][y].player === this.playerController.currentPlayer
+        );
     }
 
     canExplode(x, y) {
         const value = this.grid[x][y].value;
-        if ((x === 0 && y === 0) ||
+        if (
+            (x === 0 && y === 0) ||
             (x === 0 && y === this.gridSize.column - 1) ||
             (x === this.gridSize.row - 1 && y === 0) ||
-            (x === this.gridSize.row - 1 && y === this.gridSize.column - 1)) {
+            (x === this.gridSize.row - 1 && y === this.gridSize.column - 1)
+        ) {
             return value === 1;
         }
 
-        if ((x === 0) ||
-            (x === this.gridSize.row - 1) ||
-            (y === 0) ||
-            (y === this.gridSize.column - 1)) {
+        if (
+            x === 0 ||
+            x === this.gridSize.row - 1 ||
+            y === 0 ||
+            y === this.gridSize.column - 1
+        ) {
             return value === 2;
         }
 
@@ -91,19 +97,29 @@ export default class ChainReactor {
     }
 
     explosionIn(x, y) {
-        let explode_at = [{x: x - 1, y: y}, {x: x + 1, y: y}, {x: x, y: y - 1}, {x: x, y: y + 1}];
-        return explode_at.filter(({x, y}) => {
-            return (x >= 0) && (x < this.gridSize.row) && (y >= 0) && (y < this.gridSize.column)
-        })
+        let explode_at = [
+            { x: x - 1, y: y },
+            { x: x + 1, y: y },
+            { x: x, y: y - 1 },
+            { x: x, y: y + 1 },
+        ];
+        return explode_at.filter(({ x, y }) => {
+            return (
+                x >= 0 &&
+                x < this.gridSize.row &&
+                y >= 0 &&
+                y < this.gridSize.column
+            );
+        });
     }
 
     reactionAt(x, y, fn) {
         let reaction = {
             change: {
                 value: 0,
-                player: null
+                player: null,
             },
-            explodeTo: []
+            explodeTo: [],
         };
 
         if (this.canExplode(x, y)) {
@@ -132,29 +148,36 @@ export default class ChainReactor {
             return null;
         }
 
-        let addTo = [{x: x, y: y}];
+        let addTo = [{ x: x, y: y }];
         let reactionChain = [];
 
-        while ((addTo.length !== 0) && (!this.playerController.isComplete())) {
+        while (addTo.length !== 0 && !this.playerController.isComplete()) {
             let newAddTo = [];
             let newChain = {
                 valueChangeAt: [],
-                explosions: []
+                explosions: [],
             };
 
-            addTo.forEach(({x, y}, index) => {
+            addTo.forEach(({ x, y }, index) => {
                 if (this.playerController.isComplete()) return;
-                this.reactionAt(x, y, ({change, explodeTo}) => {
-                    newChain.valueChangeAt.push({x: x, y: y, value: change.value, player: change.player});
+                this.reactionAt(x, y, ({ change, explodeTo }) => {
+                    newChain.valueChangeAt.push({
+                        x: x,
+                        y: y,
+                        value: change.value,
+                        player: change.player,
+                    });
 
                     explodeTo.forEach((coordinate) => {
                         newChain.explosions.push({
-                            ux: x, uy: y,
-                            vx: coordinate.x, vy: coordinate.y
+                            ux: x,
+                            uy: y,
+                            vx: coordinate.x,
+                            vy: coordinate.y,
                         });
 
                         newAddTo.push(coordinate);
-                    })
+                    });
                 });
             });
 
