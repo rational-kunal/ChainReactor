@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa8c747-d1d6-417c-a88d-5d7ad2c55b92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameNode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChainReactor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChainReactor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +79,7 @@
       <workItem from="1586967430415" duration="5852000" />
       <workItem from="1587009252650" duration="370000" />
       <workItem from="1587009676814" duration="13687000" />
-      <workItem from="1587038013910" duration="2298000" />
+      <workItem from="1587038013910" duration="2519000" />
     </task>
     <servers />
   </component>
