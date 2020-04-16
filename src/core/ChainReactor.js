@@ -1,7 +1,9 @@
 class PlayerPoolController {
-    constructor(playerSize) {
+    constructor(playerSize, wonFn) {
         this.playerSize = playerSize;
         this.currentPlayer = 0;
+
+        this.wonFn = wonFn;
 
         this.wait = false;
 
@@ -25,9 +27,14 @@ class PlayerPoolController {
     isComplete() {
         let stillInGame = 0;
         if ((this.moves > this.playerSize) && (!this.wait)) {
-            this.playerNRegion.forEach((n) => (n > 0) || stillInGame++);
+            this.playerNRegion.forEach((n, i) => (n > 0) || stillInGame++);
 
-            return stillInGame === 1;
+            if(stillInGame === 1) {
+                this.playerNRegion.forEach((n, i) => (n > 0) || this.wonFn(i));
+                return true;
+            }
+
+            return false;
         }
 
         return false;
@@ -37,10 +44,10 @@ class PlayerPoolController {
 export default class ChainReactor {
     grid = [];
 
-    constructor(gridSize, playerSize) {
+    constructor(gridSize, playerSize, wonFn) {
         this.gridSize = gridSize;
 
-        this.playerController = new PlayerPoolController(playerSize);
+        this.playerController = new PlayerPoolController(playerSize, wonFn);
 
         for (let row = 0; row < this.gridSize.row; row++) {
             this.grid.push([]);
@@ -114,11 +121,8 @@ export default class ChainReactor {
             reaction.change.player = this.playerController.currentPlayer;
             this.playerController.playerNRegion[this.grid[x][y].player]++;
         }
-        console.log(this.playerController.playerNRegion[this.playerController.currentPlayer]);
 
         reaction.change.value = this.grid[x][y].value;
-
-        console.log(this.playerController.playerNRegion);
 
         fn(reaction);
     }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .game-node {
     width: 100px;
@@ -6,12 +7,23 @@
     text-align: center;
     vertical-align: middle;
     line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .board {
     background-color: #202040;
-    padding: 2px;
+    padding: 16px;
     border-radius: 8px;
+}
+
+.helper {
+    background-color: #543864;
+    color: #3282b8;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 24px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .inner-node {
@@ -27,6 +39,5 @@
     vertical-align: middle;
 
     border-radius: 50px;
-    
-    background-color: #fff;
+    color: #1b262c;
 }

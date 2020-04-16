@@ -9,14 +9,24 @@ export default class Board extends React.Component {
         super(props);
 
         this.nodeGrid = [];
+        this.wait = false;
         this.gridSize = props.gridSize;
+        this.state = {
+            won: false
+        };
 
-        this.gameController = new ChainReactor({row: this.gridSize.rowCount,column: this.gridSize.columnCount}, props.playerCount);
+        this.gameController = new ChainReactor({row: this.gridSize.rowCount,column: this.gridSize.columnCount}, props.playerCount, (player) => {
+            this.setState({
+                won: player+1
+            })
+        });
 
         this.nodeTapped = this.nodeTapped.bind(this);
     }
 
     nodeTapped({row, column}) {
+        if (this.wait) { return }
+
         const reactionChain = this.gameController.didMove(row, column);
 
         if (reactionChain==null) { return }
@@ -28,8 +38,14 @@ export default class Board extends React.Component {
                 this.nodeGrid[x][y].valueChanged({value, player, delay});
             });
             delay += delayDelta;
-            delayDelta /= 3;
+            delayDelta /= 5;
         });
+
+        this.wait = true;
+        setTimeout(()=>{
+            this.wait = false;
+            this.forceUpdate();
+        }, delay-delayDelta);
 
         this.forceUpdate();
     }
@@ -52,6 +68,11 @@ export default class Board extends React.Component {
     render() {
         return (
             <div style={{width: this.gridSize.columnCount * 100 + 'px', display: 'flex', flexWrap: 'wrap'}} className="board" >
+                <div style={{width: this.gridSize.columnCount * 100 + 'px' }} className="helper">
+                    { this.state.won ?  this.state.won + "has won"
+                     : ((!this.wait || "wait for animation, ") +
+                     (this.gameController.playerController.currentPlayer+1) + "'s turn") }
+                </div>
                 { this.nodeGrid.flat(2).map((node) => node.render()) }
             </div>
         )
