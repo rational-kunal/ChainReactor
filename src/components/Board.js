@@ -38,7 +38,7 @@ export default class Board extends React.Component {
                 this.nodeGrid[x][y].valueChanged({value, player, delay});
             });
             delay += delayDelta;
-            delayDelta /= 5;
+
         });
 
         this.wait = true;
@@ -67,11 +67,11 @@ export default class Board extends React.Component {
 
     render() {
         return (
-            <div style={{width: this.gridSize.columnCount * 100 + 'px', display: 'flex', flexWrap: 'wrap'}} className="board" >
-                <div style={{width: this.gridSize.columnCount * 100 + 'px' }} className="helper">
-                    { this.state.won ?  this.state.won + "has won"
+            <div style={{width: this.gridSize.columnCount * 10 + 'vmin', display: 'flex', flexWrap: 'wrap'}} className="board" >
+                <div style={{width: this.gridSize.columnCount * 10 + 'vmin' }} className="helper">
+                    { this.state.won ?  this.state.won + " has won"
                      : ((!this.wait || "wait for animation, ") +
-                     (this.gameController.playerController.currentPlayer+1) + "'s turn") }
+                     (this.gameController.playerController.currentPlayer) + "'s turn") }
                 </div>
                 { this.nodeGrid.flat(2).map((node) => node.render()) }
             </div>

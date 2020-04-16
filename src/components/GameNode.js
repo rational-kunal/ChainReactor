@@ -47,13 +47,14 @@ export default class GameNode {
 
 function NodeAnimationState(value, player) {
     const playerColor = ["#3282b8", "#c02739"];
-    const size = 60 + value*10;
+    const scale = (1 + value/4);
 
     return {
+        transform: "scale(" +scale +")",
         value: value,
-        width: size + 'px',
-        height: size + 'px',
-        lineHeight: size + 'px',
+        // width: size + 'vmin',
+        // height: size + 'vmin',
+        // lineHeight: size + 'vmin',
         backgroundColor: player==null ? "#30475e" : playerColor[player]
     }
 }
